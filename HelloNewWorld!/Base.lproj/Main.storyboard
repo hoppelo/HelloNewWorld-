@@ -18,18 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, New World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YNa-j3-TgN">
-                                <rect key="frame" x="16" y="214" width="361" height="52"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="45"/>
+                                <rect key="frame" x="16" y="214" width="361" height="49.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="44"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvM-A6-O4V">
-                                <rect key="frame" x="93.666666666666686" y="579" width="206" height="34.666666666666629"/>
+                                <rect key="frame" x="71.666666666666686" y="571.66666666666663" width="250" height="42"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="206" id="Aw2-xS-2pi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Aw2-xS-2pi"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Show Greeting"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Greeting">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="greeetingButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uai-Rp-jcA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -42,6 +49,10 @@
                             <constraint firstItem="YNa-j3-TgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kJ9-Qp-JJz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="LvM-A6-O4V" id="Zgh-pc-Kbe"/>
+                        <outlet property="greetingLabel" destination="YNa-j3-TgN" id="KuA-kK-yBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,8 +63,14 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
